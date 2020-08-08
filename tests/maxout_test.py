@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.layers import Layer
 
 
-from helper_func.custom_layers import Maxout
+from notebooks.helper_func.custom_layers import Maxout
 
 class TestMaxoutLayer(TestCase):
     def setUp(self):

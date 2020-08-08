@@ -29,6 +29,8 @@ class Maxout(Layer):
             regularizer=self.kernel_regularizer,
             dtype=self.dtype,
             trainable=True)
+        
+        self.kernel_shape = self.kernel.shape.as_list()
 
         self.bias = self.add_weight(
             "bias", 
@@ -37,6 +39,7 @@ class Maxout(Layer):
             regularizer=self.bias_regularizer,
             dtype=self.dtype,
             trainable=True)
+        super(Maxout, self).build(input_shape)
     
     def call(self, x):
         z = tf.tensordot(x, self.kernel, [[-1], [0]]) + self.bias

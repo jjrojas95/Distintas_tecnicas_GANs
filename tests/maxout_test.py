@@ -15,17 +15,21 @@ class TestMaxoutLayer(TestCase):
         self.maxout_instance = Maxout(self.units, self.k)
         self.maxout_instance.build(self.input_shape)
 
+    # @unittest.skip("probando el resultado")
     def test_maxout_type(self):
         self.assertTrue(isinstance(self.maxout_instance, Layer))
     
+    # @unittest.skip("probando el resultado")
     def test_kernel_shape(self):
         shape = self.maxout_instance.kernel.shape
         self.assertEqual(shape, (self.input_shape[0], self.units, self.k))
     
+    # @unittest.skip("probando el resultado")
     def test_bias_shape(self):        
         shape = self.maxout_instance.bias.shape
         self.assertEqual(shape, (self.units, self.k))
     
+    # @unittest.skip("probando el resultado")
     def test_output_shape(self):
         input_shape = (5,)
         units = 10
@@ -36,6 +40,7 @@ class TestMaxoutLayer(TestCase):
 
         self.assertEqual(output.shape, (10, units))
     
+    # @unittest.skip("probando el resultado")
     def test_output_2samples_1unit(self):
         # Primera parte, una sola unidad dos ejemplos y reducción de k.
         m = 2

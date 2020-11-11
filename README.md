@@ -11,4 +11,10 @@ Este capítulo se basa sobre todo en el artículo inicial de este marco de refer
 
 ## Capítulo 2
 En construcción
-   
+
+# Requeimientos
+* Python 3.5 - 3.8
+* Tensorflow 2.0 o mayor
+* [Numpy](https://numpy.org/)
+* [matplotlib](https://matplotlib.org/)
+* [glob](https://docs.python.org/3/library/glob.html)

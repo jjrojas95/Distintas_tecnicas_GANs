@@ -9,6 +9,17 @@ Este capítulo se basa sobre todo en el artículo inicial de este marco de refer
 
 ![entrenamiento MNIST](./notebooks/GAN_capitulo_1/Entrenamiento_GAN_Mnist.gif)
 
+### Docker
+Si quiere ejecutar el entorno con los distintos requerimiento de librerías y con jupyter notebook puede construir la imagen y crear el container de la carpeta asignada a cada capítulo de las GAN's. Para el capítulo 1 puede construir la imagen de la siguiente manera:
+
+`docker build -t gan_cap_1 -f notebooks/GAN_capitulo_1/Dockerfile notebooks/GAN_capitulo_1`
+
+Nuestra imagen recibirá el nombre de **gan_cap_1**. A continuación creará el container con el siguiente comando:
+
+`docker run -p 8888:8888 -v $(pwd)/notebooks/GAN_capitulo_1/:/home/GAN_cap1/ gan_cap_1`
+
+En su shell le aparecerá una serie de instruciones lo que debe haecr es acceder a la ruta mostrada por el shell que tiene la siguiente forma: `http://127.0.0.1:8888/?token=${SU_TOKEN}`
+
 ## Capítulo 2
 En construcción
 
